@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+      /*
+      Практика JS 18.
+      Жодних розмов. Жодних пояснень. Тільки ТЗ та результат, який має бути. Подивіться, що має вийти на виході і напишіть цю функцію.
+
+      Приклад коду:
+         spacey(['kevin', 'has','no','space']) => [ 'kevin', 'kevinhas', 'kevinhasno', 'kevinhasnospace']
+         spacey(['this','cheese','has','no','holes']) => ['this','thischeese','thischeesehas','thischeesehasno','thischeesehasnoholes']      
+      */
+
+      function spacey(arr){
+        let result = [];
+        let word = '';
+
+        arr.forEach((item) => {
+          word += item;
+          result.push(word);
+        });
+
+        return result;
+      }
+
+      console.log(spacey(['kevin', 'has','no','space'])); 
+      //  => [ 'kevin', 'kevinhas', 'kevinhasno', 'kevinhasnospace']
+
+      console.log(spacey(['this','cheese','has','no','holes']));
+      // => ['this','thischeese','thischeesehas','thischeesehasno','thischeesehasnoholes'] 
+
+
+    </script>
+  </body>
+</html>

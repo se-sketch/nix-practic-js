@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+      /*
+      Практика JS 17.
+      Виверт, який я вивчив у початковій школі, щоб визначити, чи ділиться число на три, полягає в тому, щоб скласти всі цілі числа в числі і розділити отриману суму на три. Якщо від поділу суми на три немає залишку, то вихідне число також поділяється на три. Враховуючи серію цифр у вигляді рядка, визначте, чи число, подане рядком, ділиться на три. Примітка: Уникайте використання оператора % (залишок від поділу). Число, яке прийматиме функція - завжди буде рядок.
+
+      Приклад коду:
+         divisibleByThree('123') => true
+         divisibleByThree('19254') => true
+         divisibleByThree('88') => false
+         divisibleByThree('1') => false      
+      */
+
+      /*
+      function divisibleByThree(str){
+        let res = parseFloat(str) / 3;
+        return res == Math.ceil(res);
+      }
+      */
+      function divisibleByThree(str){
+        let res = str.split('').reduce((sum, item) => sum + +item, 0) / 3;
+        return res == Math.ceil(res);
+      }
+
+      console.log(divisibleByThree('123')); //  => true
+      console.log(divisibleByThree('19254')); //  => true
+      console.log(divisibleByThree('88')); //  => false
+      console.log(divisibleByThree('1')); //  => false      
+      
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+      /*
+      Практика JS 20.
+      Необхідно реалізувати функцію, яка на вході приймає масив з різними типами даних = = gt; ['a', 1, 2, false, 'b'], а повертає об'єкт, у якому ці типи даних розсортовані за ключами.
+
+      Приклад коду:
+      {
+         number: [1, 2],
+         string: ['a', 'b'],
+         boolean: [false]
+      }      
+      */
+
+      function example(arr){
+        let result = {};
+
+        arr.forEach((item) => {
+          let key = typeof item;
+
+          if (key in result){
+            result[key].push(item);
+          }else{
+            result[key] = [item];
+          }
+        });
+        return result;
+      }
+
+      console.log(example(['a', 1, 2, false, 'b']));
+
+    </script>
+  </body>
+</html>
