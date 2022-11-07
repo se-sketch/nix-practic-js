@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+/*
+Практика JS 6.
+Даний масив числами, наприклад: [10, 20, 30, 50, 235, 3000]. Виведіть на екран лише ті числа з масиву, які починаються на цифру 1, 2 чи 5.
+*/
+   
+      let numbers = [10, 20, 30, 50, 235, 3000];
+
+      let arr = ['1', '2', '5'];
+
+      numbers.forEach(item => {
+        let str = item.toString()[0];
+        if (arr.includes(str)) {
+          document.write(item);
+          document.write('<br>');
+        } 
+      });
+
+
+  
+    </script>
+  </body>
+</html>

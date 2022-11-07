@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+      /*
+      Практика JS 14.
+      Видаліть n знаків оклику в пропозиції зліва направо. n – позитивне ціле число.
+
+      Приклад коду:
+       remove("Hi!",1) => "Hi"
+       remove("Hi!",100) => "Hi"
+       remove("Hi!!!",1) => "Hi!!"
+       remove("Hi!!!",100) => "Hi"
+       remove("!Hi",1) => "Hi"
+       remove("!Hi!",1) => "Hi!"
+       remove("!Hi!",100) => "Hi"
+       remove("!!!Hi !!hi!!! !hi",1) => "!!Hi !!hi!!! !hi"
+       remove("!!!Hi !!hi!!! !hi",3) => "Hi !!hi!!! !hi"
+       remove("!!!Hi !!hi!!! !hi",5) => "Hi hi!!! !hi"
+       remove("!!!Hi !!hi!!! !hi",100) => "Hi hi hi"      
+      */
+
+      function remove(str, n){
+        let i = 0;
+        let nRem = 0;
+
+        while(i < str.length && nRem < n){
+
+          if(str[i] == '!'){
+            str = str.slice(0, i) + str.slice(i+1);
+            nRem++;
+            continue;
+          }
+
+          i++;
+        }
+        return str;
+      }
+
+      console.log(remove("Hi!",1)); // "Hi"
+      console.log(remove("Hi!",100));
+      console.log(remove("Hi!!!",1)); //  => "Hi!!"
+      console.log(remove("Hi!!!",100)); //  => "Hi"
+      console.log(remove("!Hi",1)); //  => "Hi"
+      console.log(remove("!Hi!",1)); //  => "Hi!"
+      console.log(remove("!Hi!",100)); // => "Hi"
+      console.log(remove("!!!Hi !!hi!!! !hi",1)); //  => "!!Hi !!hi!!! !hi"
+      console.log(remove("!!!Hi !!hi!!! !hi",3)); //  => "Hi !!hi!!! !hi"
+      console.log(remove("!!!Hi !!hi!!! !hi",5)); //  => "Hi hi!!! !hi"
+      console.log(remove("!!!Hi !!hi!!! !hi",100)); //  => "Hi hi hi"
+    
+
+    </script>
+  </body>
+</html>

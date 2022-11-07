@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+      /*
+      Практика JS 16.
+      Напишіть функцію, яка приймає рядок і число. Поверніть у вигляді масиву тільки ті слова, довжина яких перевищує число.
+
+      Приклад коду:
+         example ('Сьогодні чудовий день. З самого ранку ми підемо на озеро, купатися.', 5) => ['Сьогодні', 'Відмінний', 'самого', 'підемо', 'купатися']
+         example('Над містом хмари, коридори, береги, проспект, річка.', 7) => ['коридори', 'проспект']      
+      */
+
+      function example(str, n){
+        let arr = str.split(/[ .,]/);
+        let length = arr.length;
+
+        for(let i = length - 1; i >= 0; i--){
+          if (!(arr[i].length > n)){
+            arr.splice(i, 1);
+          }
+        }
+        return arr;
+      }
+
+      console.log(example('Сьогодні чудовий день. З самого ранку ми підемо на озеро, купатися.', 5));
+      // => ['Сьогодні', 'Відмінний', 'самого', 'підемо', 'купатися']
+
+      console.log(example('Над містом хмари, коридори, береги, проспект, річка.', 7)); 
+      //  => ['коридори', 'проспект']
+
+
+    </script>
+  </body>
+</html>
