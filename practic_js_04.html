@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+  </head>
+
+  <body>
+    
+    <script type="text/javascript">
+  /*
+  Практика JS 4.
+Даний масив ['Саша', 'Петя', 'Оксана'], зробіть із нього ['Оксанa', 'Олег', 'Саша']. Реалізуйте це завдання двома способами. У першому вихідний масив має бути змінений, у другому - не може бути змінений.  
+  */    
+  
+
+      // 1)
+
+      let arr = ['Саша', 'Петя', 'Оксана'];
+
+      arr[1] = 'Олег';
+
+      console.log(arr.sort());
+
+      // 2)
+
+      arr = ['Саша', 'Петя', 'Оксана'];
+
+      let arrCopy = arr.slice();
+
+      arrCopy[1] = 'Олег';
+
+      console.log(arrCopy.sort());
+      console.log(arr);
+  
+    </script>
+
+  </body>
+</html>
